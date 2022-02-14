@@ -1,5 +1,5 @@
 {% set name = "tango-access-control" %}
-{% set version = "2.16" %}
+{% set version = "2.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-{{ version }}/TangoAccessControl-TangoAccessControl-Release-{{ version }}.tar.gz
-  sha256: c95dfd512cf2c0da395fd41a05f83c92f9a3ff4a954c382a46201bf48e650589
+  sha256: 1c829b8628e01144d7d29f960a5e65b2fe3e4736ba88252240888ce856f832e9
 
 build:
   number: 0
@@ -35,11 +35,11 @@ about:
   home: https://www.tango-controls.org
   license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: 'Tango Access Control device server'
+  summary: Tango Access Control device server
   description: |
-   This is the device server used to run a Tango control system
-   with controlled access.
-   Tango-Controls is a software toolkit for building control systems.
+    This is the device server used to run a Tango control system
+    with controlled access.
+    Tango-Controls is a software toolkit for building control systems.
   dev_url: https://gitlab.com/tango-controls/TangoAccessControl
 
 extra:
