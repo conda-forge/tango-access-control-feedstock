@@ -8,6 +8,8 @@ package:
 source:
   url: https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-{{ version }}/TangoAccessControl-TangoAccessControl-Release-{{ version }}.tar.gz
   sha256: 8b02a502cc9f5a86ff23da04d498cc1c142abeb3d4dd5e9a4fba3d961af95ab2
+  patches:
+    - cmake-macos.patch
 
 build:
   number: 1

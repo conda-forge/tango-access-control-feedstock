@@ -1,0 +1,23 @@
+diff --git a/TangoAccessControl/CMakeLists.txt b/TangoAccessControl/CMakeLists.txt
+index 9e99a57..ad41ae4 100644
+--- a/TangoAccessControl/CMakeLists.txt
++++ b/TangoAccessControl/CMakeLists.txt
+@@ -30,8 +30,16 @@ include_directories(../AbstractClasses ${TANGO_PKG_INCLUDE_DIRS} ${MYSQL_INCLUDE
+ link_directories(${TANGO_PKG_LIBRARY_DIRS})
+ 
+ add_executable(TangoAccessControl ${SOURCES} ${ADDITIONAL_SOURCES})
+-target_link_libraries(TangoAccessControl ${TANGO_PKG_LIBRARIES} ${MYSQL_LIBRARIES} -Wl,-z,now -pie)
+-target_compile_options(TangoAccessControl PUBLIC ${TANGO_PKG_CFLAGS_OTHER} -Wall -Wextra -D_FORTIFY_SOURCE=2 -O1 -fpie)
++target_link_libraries(TangoAccessControl ${TANGO_PKG_LIBRARIES} ${MYSQL_LIBRARIES})
++target_compile_options(TangoAccessControl PUBLIC ${TANGO_PKG_CFLAGS_OTHER} -Wall -Wextra -D_FORTIFY_SOURCE=2 -O1)
++
++message("Compiler: ${CMAKE_CXX_COMPILER_ID}")
++if(NOT (CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang"))
++    target_compile_options(TangoAccessControl PUBLIC -fpie)
++    set_target_properties(TangoAccessControl PROPERTIES LINK_FLAGS "-Wl,-z,now,-pie")
++else()
++    set_target_properties(TangoAccessControl PROPERTIES LINK_FLAGS "-bind_at_load")
++endif()
+ 
+ install(TARGETS TangoAccessControl
+         RUNTIME DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}"
