@@ -1,5 +1,5 @@
 {% set name = "tango-access-control" %}
-{% set version = "2.18" %}
+{% set version = "2.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-{{ version }}/TangoAccessControl-TangoAccessControl-Release-{{ version }}.tar.gz
-  sha256: 8b02a502cc9f5a86ff23da04d498cc1c142abeb3d4dd5e9a4fba3d961af95ab2
+  sha256: d507194f67fc8b7cf06b89d0117937c3e82ff733d952b5f192581eb3f55155ee
   patches:
     - cmake-macos.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
