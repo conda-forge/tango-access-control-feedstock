@@ -1,5 +1,6 @@
 setlocal EnableDelayedExpansion
 
+cd TangoAccessControl
 mkdir build
 cd build
 
