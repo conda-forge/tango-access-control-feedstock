@@ -11,15 +11,14 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   build:
     - cmake
-    - make
+    - make                    # [unix]
     - {{ compiler('cxx') }}
-    - libtool
-    - pkg-config
+    - libtool                 # [unix]
+    - pkg-config              # [unix]
   host:
     - cppzmq
     - cpptango
@@ -31,6 +30,7 @@ test:
   commands:
     # TangoAccessControl --help returns 255, so grep the stderr for test
     - TangoAccessControl --help 2>&1 | grep usage
+    - TangoAccessControl.exe --help 2>&1 | findstr usage  # [win]
 
 about:
   home: https://www.tango-controls.org
