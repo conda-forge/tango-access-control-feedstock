@@ -31,7 +31,7 @@ requirements:
 test:
   commands:
     # TangoAccessControl --help returns 255, so grep the stderr for test
-    - TangoAccessControl --help 2>&1 | grep usage
+    - TangoAccessControl --help 2>&1 | grep usage         # [unix]
     - TangoAccessControl.exe --help 2>&1 | findstr usage  # [win]
 
 about:
