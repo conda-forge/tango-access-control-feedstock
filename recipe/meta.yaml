@@ -1,5 +1,5 @@
 {% set name = "tango-access-control" %}
-{% set version = "2.19" %}
+{% set version = "2.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-{{ version }}/TangoAccessControl-TangoAccessControl-Release-{{ version }}.tar.gz
-  sha256: d507194f67fc8b7cf06b89d0117937c3e82ff733d952b5f192581eb3f55155ee
+  sha256: 5ee39b580971a541f4dcc317cf69125fbecfd206a5b8b6544e1314e6bc914ee6
   patches:
     - find-zeromq-win.patch  # [win]
 
