@@ -12,14 +12,13 @@ source:
     - find-zeromq-win.patch  # [win]
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
     - cmake
     - make                    # [unix]
     - {{ compiler('cxx') }}
-    - libtool                 # [unix]
     - pkg-config              # [unix]
   host:
     - cppzmq
