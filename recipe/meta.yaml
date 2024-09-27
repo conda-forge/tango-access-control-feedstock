@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-{{ version }}/TangoAccessControl-TangoAccessControl-Release-{{ version }}.tar.gz
+  url: https://gitlab.com/tango-controls/TangoAccessControl/-/releases/TangoAccessControl-Release-{{ version }}/downloads/TangoAccessControl-with-submodules-TangoAccessControl-Release-{{ version }}.tar.gz
   sha256: f318d04ef9d35652b9d74ef0267039f58b7062bef61a42f2c39cd072ec365d0a
 
 build:
