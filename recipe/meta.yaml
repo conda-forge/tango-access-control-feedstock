@@ -22,8 +22,11 @@ requirements:
   host:
     - cppzmq
     - cpptango
-    - mysql-devel <9
+    - mysql-devel
     - omniorb-libs
+  run:
+    # mysql-client is required to install "lib/plugin/mysql_native_password.so"
+    - mysql-client
 
 test:
   commands:
