@@ -10,7 +10,7 @@ source:
   sha256: f318d04ef9d35652b9d74ef0267039f58b7062bef61a42f2c39cd072ec365d0a
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -22,8 +22,11 @@ requirements:
   host:
     - cppzmq
     - cpptango
-    - mysql-devel <9
+    - mysql-devel
     - omniorb-libs
+  run:
+    # mysql-client is required to install "lib/plugin/mysql_native_password.so"
+    - mysql-client
 
 test:
   commands:
