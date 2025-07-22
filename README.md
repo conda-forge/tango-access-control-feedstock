@@ -3,7 +3,7 @@ About tango-access-control-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-access-control-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.tango-controls.org
+Home: https://www.tango-controls.org/
 
 Package license: GPL-3.0-or-later
 
@@ -14,7 +14,6 @@ Development: https://gitlab.com/tango-controls/TangoAccessControl
 This is the device server used to run a Tango control system
 with controlled access.
 Tango-Controls is a software toolkit for building control systems.
-
 
 Current build status
 ====================
