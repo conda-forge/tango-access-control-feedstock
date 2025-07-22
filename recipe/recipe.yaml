@@ -18,12 +18,12 @@ build:
 requirements:
   build:
     - cmake
-    - if: unix
-      then: make
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - if: unix
-      then: pkg-config
+      then:
+        - make
+        - pkg-config
   host:
     - cppzmq
     - cpptango
@@ -36,18 +36,17 @@ requirements:
 tests:
   - script:
       - if: unix
-        then: TangoAccessControl --help 2>&1 | grep usage
-      - if: win
-        then: TangoAccessControl.exe --help 2>&1 | findstr usage
+        then: TangoAccessControl --help 2>&1 | grep -i usage
+        else: TangoAccessControl.exe --help 2>&1 | findstr /i usage
 
 about:
-  license: GPL-3.0-or-later
-  license_file: LICENSE
   summary: Tango Access Control device server
   description: |
     This is the device server used to run a Tango control system
     with controlled access.
     Tango-Controls is a software toolkit for building control systems.
+  license: GPL-3.0-or-later
+  license_file: LICENSE
   homepage: https://www.tango-controls.org
   repository: https://gitlab.com/tango-controls/TangoAccessControl
 
