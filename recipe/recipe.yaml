@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: tango-access-control
+  version: 2.21
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/TangoAccessControl/-/releases/TangoAccessControl-Release-${{ version }}/downloads/TangoAccessControl-with-submodules-TangoAccessControl-Release-${{ version }}.tar.gz
+  sha256: f318d04ef9d35652b9d74ef0267039f58b7062bef61a42f2c39cd072ec365d0a
+
+build:
+  number: 3
+
+requirements:
+  build:
+    - cmake
+    - if: unix
+      then: make
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+    - if: unix
+      then: pkg-config
+  host:
+    - cppzmq
+    - cpptango
+    - mysql-devel
+    - omniorb-libs
+  run:
+    # mysql-client is required to install "lib/plugin/mysql_native_password.so"
+    - mysql-client
+
+tests:
+  - script:
+      - if: unix
+        then: TangoAccessControl --help 2>&1 | grep usage
+      - if: win
+        then: TangoAccessControl.exe --help 2>&1 | findstr usage
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: Tango Access Control device server
+  description: |
+    This is the device server used to run a Tango control system
+    with controlled access.
+    Tango-Controls is a software toolkit for building control systems.
+  homepage: https://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/TangoAccessControl
+
+extra:
+  recipe-maintainers:
+    - beenje
