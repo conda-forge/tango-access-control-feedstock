@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tango-access-control
-  version: 2.21
+  version: "2.22"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoAccessControl/-/releases/TangoAccessControl-Release-${{ version }}/downloads/TangoAccessControl-with-submodules-TangoAccessControl-Release-${{ version }}.tar.gz
-  sha256: f318d04ef9d35652b9d74ef0267039f58b7062bef61a42f2c39cd072ec365d0a
+  sha256: ced23d8f264d52590e607bb35ac3a49efe1f59f45b9b7dfbf6b9340e1eca3653
 
 build:
-  number: 5
+  number: 0
 
 requirements:
   build:
