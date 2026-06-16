@@ -9,6 +9,6 @@ cpptango:
 cxx_compiler:
 - vs2022
 mysql_devel:
-- '9.6'
+- '9.7'
 target_platform:
 - win-64

@@ -19,7 +19,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/tango-access-control-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/tango-access-control-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -33,48 +40,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_cpptango10.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango10.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cpptango10.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango10.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cpptango10.3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango10.3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cpptango9.3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango9.3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cpptango9.4</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango9.4" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cpptango9.5</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango9.5" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_aarch64_cpptango10.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
@@ -191,41 +156,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cpptango9.5" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cpptango10.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango10.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cpptango10.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango10.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cpptango10.3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango10.3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cpptango9.4</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango9.4" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_cpptango9.5</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14385&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-access-control-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango9.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
